@@ -15,7 +15,7 @@ module.exports = function(RED) {
 		    };
 		    request(options, function (error, response, body) {
 		        if (response && response.statusCode != 200) {
-		            error = "Invalid response received from server: " + response.statusCode
+		            error = "Invalid response received from server: " + response.statusCode + " - " + body;
 		            msg.payload = error;
 		        } else {
 		        	msg.payload = body;
