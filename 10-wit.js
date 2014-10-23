@@ -1,21 +1,28 @@
 module.exports = function(RED) {
-	var wit = require('node-wit');
-	var ACCESS_TOKEN = "WNGYO646UEE4LR2L3JBQZJFIEIBXAYIT";
-    function witai(config) {
+	var request = require('request');
+	function witai(config) {
         RED.nodes.createNode(this,config);
         var node = this;
         this.on('input', function(msg) {
-        	var qtext = msg.payload;
-
-            wit.captureTextIntent(ACCESS_TOKEN, qtext, function (err, res) {
-            	if (err) {
-            		node.send(err);
-            	} else {
-            		msg.payload = res;
-            		node.send(msg);
-            	};
-            });
+        	var options = {
+		        url: 'https://api.wit.ai/message',
+		        qs: {'q': msg.payload},
+		        json: true,
+		        headers: {
+		            'Authorization': 'Bearer ' + config.access_token,
+		            'Accept': 'application/vnd.wit.' + config.version
+		        }
+		    };
+		    request(options, function (error, response, body) {
+		        if (response && response.statusCode != 200) {
+		            error = "Invalid response received from server: " + response.statusCode
+		            msg.payload = error;
+		        } else {
+		        	msg.payload = body;
+		        };
+				node.send(msg);
+		    });
         });
     }
-    RED.nodes.registerType("wit-ai",witai);
+    RED.nodes.registerType("wit.ai",witai);
 }
