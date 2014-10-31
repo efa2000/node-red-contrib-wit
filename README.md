@@ -1,10 +1,14 @@
 node-red-contrib-wit
 ====================
 
-Node-Red (http://nodered.org) nodes for communicating with Wit.ai (https://wit.ai/)
+[![NPM](https://nodei.co/npm/node-red-contrib-wit.png?downloads=true)](https://nodei.co/npm/node-red-contrib-wit/)
 
-<img src="https://github.com/efa2000/node-red-contrib-wit/blob/master/screen-shot.png">
+Node-Red nodes for communication with Wit.ai
 
+WIT.AI - Natural Language for the Internet of Things! 
+detail info https://wit.ai/docs/http
+
+[![Screen shot](https://github.com/efa2000/node-red-contrib-wit/blob/master/screen-shot.png)]
 
 #Install
 
@@ -45,8 +49,7 @@ Example response
 	        "confidence" : 0.621
 	    } ]
 	  }
-
-Detail info https://wit.ai/docs/http 
+ 
 
 
 

@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-wit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Node-Red (http://nodered.org) nodes for communicating with Wit.ai (https://wit.ai/)",
   "main": "10-wit.js",
   "dependencies": {
@@ -14,7 +14,7 @@
     "url": "https://github.com/efa2000/node-red-contrib-wit.git"
   },
   "keywords": [
-    "node-red"
+    "node-red", "wit", "wit.ai", "Natural Language"
   ],
   "author": "efa200",
   "license": "ISC",
