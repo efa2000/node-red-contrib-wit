@@ -5,8 +5,7 @@ node-red-contrib-wit
 
 Node-Red nodes for communication with Wit.ai
 
-WIT.AI - Natural Language for the Internet of Things! 
-detail info https://wit.ai/docs/http
+WIT.AI - Natural Language for the Internet of Things! https://wit.ai/
 
 [![Screen shot](https://github.com/efa2000/node-red-contrib-wit/blob/master/screen-shot.png)](https://github.com/efa2000/node-red-contrib-wit/blob/master/screen-shot.png)
 
@@ -50,6 +49,6 @@ Example response
 	    } ]
 	  }
  
-
-
+#Datail info
+Detail info https://wit.ai/docs/http
 
