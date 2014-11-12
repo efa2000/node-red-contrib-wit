@@ -1,7 +1,7 @@
 node-red-contrib-wit
 ====================
 
-[![NPM](https://nodei.co/npm/node-red-contrib-wit.png?downloads=true)](https://nodei.co/npm/node-red-contrib-wit/)
+[![NPM](https://nodei.co/npm/node-red-contrib-wit.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/node-red-contrib-wit/)
 
 Node-Red nodes for communication with Wit.ai
 
