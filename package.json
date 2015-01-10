@@ -16,6 +16,11 @@
   "keywords": [
     "node-red", "wit", "wit.ai", "Natural Language"
   ],
+  "node-red": {
+                "nodes": {
+                        "wit": "10-wit.js"
+                }
+  },
   "author": "efa200",
   "license": "ISC",
   "bugs": {
