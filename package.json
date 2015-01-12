@@ -4,7 +4,7 @@
   "description": "Node-Red nodes for communicating with Wit.ai (https://wit.ai/)",
   "main": "10-wit.js",
   "dependencies": {
-    "request": "2.42.0"
+    "request": ">=2.42.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
