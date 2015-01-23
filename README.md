@@ -49,6 +49,5 @@ Example response
 	    } ]
 	  }
  
-#Datail info
-Detail info https://wit.ai/docs/http
+
 
