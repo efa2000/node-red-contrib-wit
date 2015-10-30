@@ -1,5 +1,5 @@
 <script type="text/javascript">
-    RED.nodes.registerType('wit.ai',{
+    RED.nodes.registerType('wit.ai text',{
         category: 'analysis',
         color: '#a6bbcf',
         defaults: {
@@ -14,9 +14,28 @@
             return this.name||"wit.ai";
         }
     });
+
+    RED.nodes.registerType('wit.ai voice',{
+        category: 'analysis',
+        color: '#a6bb00',
+        defaults: {
+            name: {value:""},
+            access_token: {value:"", required:true},
+            version: {value:"20141023", required:true},
+            timeout: {value:"1000"}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "hash.png",
+        label: function() {
+            return this.name||"wit.ai voice";
+        }
+    });
+
+
 </script>
 
-<script type="text/x-red" data-template-name="wit.ai">
+<script type="text/x-red" data-template-name="wit.ai text">
     <div class="form-row">
         <label for="node-input-name"><i class="icon-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
@@ -31,7 +50,42 @@
     </div>
 </script>
 
-<script type="text/x-red" data-help-name="wit.ai">
+
+<script type="text/x-red" data-template-name="wit.ai voice">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-access_token"> Access Token</label>
+        <input type="text" id="node-input-access_token" placeholder="Access Token">
+    </div>
+    <div class="form-row">
+        <label for="node-input-version"> Version</label>
+        <input type="text" id="node-input-version" placeholder="API Version">
+    </div>
+    <div class="form-row">
+        <label for="node-input-timeout"> Timeout</label>
+        <input type="text" id="node-input-timeout" placeholder="1000 ms">
+    </div>
+
+
+</script>
+
+
+
+
+<script type="text/x-red" data-help-name="wit.ai text">
+    <h3>wit.ai</h3>
+    <p>Natural Language for the Internet of Things</p>
+    <a href="https://wit.ai/">https://wit.ai/</a>
+    <h4>Access Token</h4>
+    <p>Wit.AI uses OAuth2 as an authorization layer. As such, every API request must contain an Authorize HTTP header with a token Access tokens are instance specific.</p>
+    <h4>Version</h4>
+    <p>This parameter is a date that represents the “version” of the Wit API. We’ll try to minimize backwards-incompatible changes we make to the API, but when we do make these changes, this parameter will allow you to continue to use the API as before and give you time to transition to the new implementation if you want.</p>
+</script>
+
+<script type="text/x-red" data-help-name="wit.ai voice">
     <h3>wit.ai</h3>
     <p>Natural Language for the Internet of Things</p>
     <a href="https://wit.ai/">https://wit.ai/</a>
