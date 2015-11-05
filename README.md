@@ -46,6 +46,5 @@ Example response
 	        "confidence" : 0.621
 	    } ]
 	  }
- 
-
-
+#wit.ai voice
+Additional node to handle microphone recordings for voice recognition
